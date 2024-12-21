@@ -132,6 +132,30 @@ public class LL {
         return head;
         
      }
+
+     private static node insertK(node head,int val, int k){
+        if(head==null){
+            if(k==1){
+                return new node(val);
+            }
+        }
+        if(k==1){
+            return new node(val,head);
+        }
+        int c=0;
+        node temp=head;
+        while(temp!=null){
+            c++;
+            if(c==k-1){
+                node t=new node(val);
+                t.next=temp.next;
+                temp.next=t;
+                break;
+            }
+            temp=temp.next;
+        }
+        return head;
+     }
      
     public static void main(String[] args) {
         int[] arr = {3,9,2,96,23};
@@ -145,7 +169,7 @@ public class LL {
      
 
         
-           n= insertT(s, 48);
+           n= insertK(n, 48,3);
             print(n);
 
        }
