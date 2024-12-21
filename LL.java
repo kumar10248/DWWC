@@ -156,6 +156,31 @@ public class LL {
         }
         return head;
      }
+
+
+
+     private static node insertBeforeV(node head,int val, int el){
+        if(head==null){
+            return null;
+        }
+        if(head.data==el){
+            return new node(val,head);
+        }
+    
+        node temp=head;
+        while(temp!=null){
+        
+            if(temp.next.data==el){
+                node t=new node(val);
+                t.next=temp.next;
+                temp.next=t;
+                break;
+            }
+            temp=temp.next;
+        }
+        return head;
+     }
+     
      
     public static void main(String[] args) {
         int[] arr = {3,9,2,96,23};
@@ -169,7 +194,7 @@ public class LL {
      
 
         
-           n= insertK(n, 48,3);
+           n= insertBeforeV(n, 4,3);
             print(n);
 
        }
