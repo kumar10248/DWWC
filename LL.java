@@ -114,8 +114,8 @@ public class LL {
      }
 
      private static node insertH(node head, int val){
-        node temp =new node(val,head);
-        return temp;
+        return new node(val,head);
+        
      }
      
     public static void main(String[] args) {
