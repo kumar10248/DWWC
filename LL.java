@@ -118,10 +118,25 @@ public class LL {
         
      }
      
+     private static node insertT(node head, int val){
+        if(head==null){
+            node temp=new node(val,null);
+            return temp;
+        }
+        node temp=head;
+        while(temp.next!=null){
+            temp=temp.next;
+        }
+        node t=new node(val,null);
+        temp.next=t;
+        return head;
+        
+     }
+     
     public static void main(String[] args) {
         int[] arr = {3,9,2,96,23};
         node n=toLL(arr);
-    
+    node s=null;
 
         //   while(temp!=null){
         //     System.out.print(temp.data+"->");
@@ -130,7 +145,8 @@ public class LL {
      
 
         
-           n= insertH(n, 5);
+           n= insertT(s, 48);
             print(n);
+
        }
 }
