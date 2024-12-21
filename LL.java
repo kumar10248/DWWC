@@ -113,7 +113,10 @@ public class LL {
         return head;
      }
 
-
+     private static node insertH(node head, int val){
+        node temp =new node(val,head);
+        return temp;
+     }
      
     public static void main(String[] args) {
         int[] arr = {3,9,2,96,23};
@@ -125,7 +128,9 @@ public class LL {
         //     temp=temp.next;
         //   }
      
-           n= removeE(n,96);
+
+        
+           n= insertH(n, 5);
             print(n);
        }
 }
